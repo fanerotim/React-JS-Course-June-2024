@@ -1,0 +1,19 @@
+.nav__container {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    gap: 1rem;
+
+    &__item {
+        cursor: pointer;
+
+        &:hover {
+            color: rgb(95, 95, 95);
+        }
+
+        &:last-child {
+            padding-right: 1rem;
+        }
+    }
+}
+
