@@ -1,9 +1,7 @@
 import './Button.scss'
 import { useState } from 'react'
 
-
-
-const Button = (props) => {
+const Button = () => {
 
     let [count, setCount] = useState(0);
 
@@ -19,13 +17,9 @@ const Button = (props) => {
         <>
         <button className='btn' onClick={add}>+</button>
         <button className='btn' onClick={subtract}>-</button>
-        <h3>You clicked me {count} {count === 1 || count === -1 ? 'time' : 'times'}!</h3>
+        <h3>Total count: {count}</h3>
         </>
     )  
 } 
-
-
-
-
 
 export default Button;
