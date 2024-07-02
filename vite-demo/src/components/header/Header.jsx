@@ -1,5 +1,7 @@
 import './Header.scss'
 
+const colorChecker = true;
+
 const Header = () => {
     return (
         <nav className='nav__wrapper'>
