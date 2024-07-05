@@ -1,0 +1,10 @@
+.todo-list-container {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .todo-list-container h1 {
+    font-size: 2rem;
+    height: 4rem;
+  }
