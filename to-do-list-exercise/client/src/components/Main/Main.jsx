@@ -3,7 +3,7 @@ import Section from '../Section/Section';
 
 const Main = () => {
     return (
-        <main class="main">
+        <main className="main">
             <Section/>
         </main>
     )

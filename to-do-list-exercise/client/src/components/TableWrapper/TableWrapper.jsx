@@ -4,7 +4,7 @@ import Table from '../Table/Table';
 
 const TableWrapper = () => {
     return (
-        <div class="table-wrapper">
+        <div className="table-wrapper">
             {/* <Spinner/> */}
             <Table/>
         </div>

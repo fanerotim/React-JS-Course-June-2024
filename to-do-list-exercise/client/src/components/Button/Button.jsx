@@ -1,7 +1,9 @@
+import './Button.css'
+
 const Button = () => {
     return (
-        <div class="add-btn-container">
-            <button class="btn">+ Add new Todo</button>
+        <div className="add-btn-container">
+            <button className="btn">+ Add new Todo</button>
         </div>
     )
 }

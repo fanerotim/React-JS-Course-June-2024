@@ -1,20 +1,24 @@
 import './Table.css'
+import Item from '../Item/Item';
 
 const Table = () => {
-    return (
-        <table class="table">
-          <thead>
-            <tr>
-              <th class="table-header-task">Task</th>
-              <th class="table-header-status">Status</th>
-              <th class="table-header-action">Action</th>
-            </tr>
-          </thead>
-          <tbody>
-        
-          </tbody>
-        </table>
-    )
+  return (
+    <table className="table">
+      <thead>
+        <tr>
+          <th className="table-header-task">Task</th>
+          <th className="table-header-status">Status</th>
+          <th className="table-header-action">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <Item/>
+      </tbody>
+    </table>
+  )
 }
+
+
+
 
 export default Table;
