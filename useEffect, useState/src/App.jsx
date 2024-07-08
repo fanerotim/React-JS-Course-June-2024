@@ -1,5 +1,6 @@
 import './App.css'
 import Home from './components/home/Home'
+import { Timer } from './components/Timer/Timer'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
       <h1>Enter your name below</h1>
       <br/>
       <Home/>
+      <Timer/>
     </>
   )
 }
