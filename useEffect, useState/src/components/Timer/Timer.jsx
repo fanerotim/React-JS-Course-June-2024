@@ -12,7 +12,7 @@ export const Timer = () => {
     //practicing useEffect 
     useEffect(() => {
         if (time > 5) {
-            console.log('time is more than 5')
+            setTime(0)
         } else {
             return;
         }
