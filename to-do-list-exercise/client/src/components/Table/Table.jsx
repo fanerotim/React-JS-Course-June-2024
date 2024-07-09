@@ -1,18 +1,26 @@
 import './Table.css'
 import Item from '../Item/Item';
 import { useState, useEffect } from 'react';
-import Spinner from '../Spinner/Spinner'
+import Spinner from '../Spinner/Spinner';
 
 const Table = () => {
 
   const [loading, setLoading] = useState(true);
+  const [value, setValue] = useState({value: 1});
+
+  useEffect(() => {
+    console.log('re-render')
+  }, [loading, value])
 
   function checkLoading(data) {
     setLoading(data);
   }
 
-  useEffect(() => {
-  }, [loading])
+  function shouldRerenderComp(data) {
+    setValue(() => {
+      setValue({value: 2})
+    })
+  }
 
   return (
     <>
@@ -26,11 +34,10 @@ const Table = () => {
         </tr>
       </thead>
       <tbody>
-        <Item checkLoading={checkLoading}/>
+        <Item checkLoading={checkLoading} shouldRerender={shouldRerenderComp}/>
       </tbody>
     </table>
     </>
-
   )
 }
 
