@@ -1,8 +1,22 @@
 import './Table.css'
 import Item from '../Item/Item';
+import { useState, useEffect } from 'react';
+import Spinner from '../Spinner/Spinner'
 
 const Table = () => {
+
+  const [loading, setLoading] = useState(true);
+
+  function checkLoading(data) {
+    setLoading(data);
+  }
+
+  useEffect(() => {
+  }, [loading])
+
   return (
+    <>
+    {loading && <Spinner/>}
     <table className="table">
       <thead>
         <tr>
@@ -12,13 +26,12 @@ const Table = () => {
         </tr>
       </thead>
       <tbody>
-        <Item/>
+        <Item checkLoading={checkLoading}/>
       </tbody>
     </table>
+    </>
+
   )
 }
-
-
-
 
 export default Table;
