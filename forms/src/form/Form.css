@@ -1,0 +1,22 @@
+.practice-form {
+    border: 1px solid green;
+    width: 80vw;
+    margin: 0 auto;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.input-wrapper {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+}
+
+.form-input {
+    width: 12rem;
+    padding: 0.2rem 0;
+    border-radius: 0.5rem;
+    border: 1px solid rgb(147, 147, 236);
+}
