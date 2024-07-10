@@ -6,20 +6,12 @@ import Spinner from '../Spinner/Spinner';
 const Table = () => {
 
   const [loading, setLoading] = useState(true);
-  const [value, setValue] = useState({value: 1});
 
   useEffect(() => {
-    console.log('re-render')
-  }, [loading, value])
+  }, [loading])
 
   function checkLoading(data) {
     setLoading(data);
-  }
-
-  function shouldRerenderComp(data) {
-    setValue(() => {
-      setValue({value: 2})
-    })
   }
 
   return (
@@ -34,7 +26,7 @@ const Table = () => {
         </tr>
       </thead>
       <tbody>
-        <Item checkLoading={checkLoading} shouldRerender={shouldRerenderComp}/>
+        <Item checkLoading={checkLoading} />
       </tbody>
     </table>
     </>
