@@ -1,4 +1,14 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 .heading {
   text-align: center;
   font-size: 4rem;
+  font-weight: 600;
+}
+
+.subheading {
+  text-align: center;
+  font-weight: normal;
 }

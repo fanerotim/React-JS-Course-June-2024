@@ -1,9 +1,9 @@
 .practice-form {
-    border: 1px solid green;
-    width: 80vw;
+    width: fit-content;
     margin: 0 auto;
     text-align: center;
-    padding: 4rem 0;
+    padding: 2rem 3rem;
+    border-radius: .6rem;
 }
 
 .input-wrapper {

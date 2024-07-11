@@ -1,28 +1,58 @@
 import './Form.css'
+import { Todo } from '../components/todo-list/Todo';
 
 import { useState } from "react";
 
 const Form = () => {
 
-    const [email, setEmail] = useState('');
+    const [formValues, setFormValues] = useState({
+        email: '',
+        message: '',
+        author: '',
+    });
+
+    const handleChange = (e) => {
+
+        setFormValues((oldValues) => (
+            {
+                ...oldValues,
+                [e.target.name]: e.target.value
+            }
+        ))
+    }
+
     const [message, setMessage] = useState('');
-    const [author, setAuthor] = useState('');
 
     function submitHandler(e) {
         e.preventDefault();
-        console.log(email, message, author)
-        console.log(e.target.value)
+        
+        if (!formValues.email || !formValues.message || !formValues.author) {
+            return;
+        } 
+         
+        setMessage(formValues.message)
+        
+        setFormValues({
+            email: '',
+            message: '',
+            author: ''
+        })
     }
 
     return (
+        <>
+        <Todo 
+        todo={message} 
+        />
         <form className='practice-form' action="" onSubmit={submitHandler}>
             <div className='input-wrapper'>
                 <label className='form-label' htmlFor="email">Email</label>
                 <input
+                    name='email'
                     className='form-input'
                     type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    value={formValues.email}
+                    onChange={handleChange}
                 />
             </div>
 
@@ -30,8 +60,9 @@ const Form = () => {
                 <label className='form-label' htmlFor="email">Message</label>
                 <textarea
                     className='form-input'
-                    value={message} 
-                    onChange={(e) => setMessage(e.target.value)}>
+                    name='message'
+                    value={formValues.message} 
+                    onChange={handleChange}>
                 </textarea>
             </div>
 
@@ -39,9 +70,9 @@ const Form = () => {
                 <label className='form-label' htmlFor="author">Author</label>
                 <select 
                     className='form-input'
-                    name="name"
-                    onChange={(e) => setAuthor(e.target.value)}
-                    value={author}
+                    name="author"
+                    onChange={handleChange}
+                    value={formValues.author}
                     >
                     <option></option>
                     <option>Me</option>
@@ -52,6 +83,7 @@ const Form = () => {
             <input type="Submit" />
 
         </form>
+        </>
     )
 }
 

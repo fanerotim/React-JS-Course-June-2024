@@ -1,0 +1,22 @@
+.todo-wrapper {
+    margin: 2rem auto;
+    list-style-type: none;
+    /* background-color: white; */
+    width: fit-content;
+    padding: 1.5rem;
+    border: 1px solid white;
+    border-radius: .5rem;
+}
+
+.todo-item {
+    text-align: left;
+    background-color: rgb(233, 233, 233);
+    margin: .5rem 0;
+    border-radius: .2rem;
+    padding: .2rem .5rem;
+}
+
+.todo-item:hover {
+    background-color: antiquewhite;
+    cursor: pointer;
+}
