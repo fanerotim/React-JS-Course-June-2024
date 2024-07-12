@@ -8,6 +8,10 @@
     border-radius: .5rem;
 }
 
+.todo-item-wrapper {
+    display: flex;
+}
+
 .todo-item {
     text-align: left;
     background-color: rgb(233, 233, 233);
@@ -19,4 +23,35 @@
 .todo-item:hover {
     background-color: antiquewhite;
     cursor: pointer;
+}
+
+.buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn {
+    padding: 0.2rem;
+    margin-left: 0.5rem;
+    border-radius: .5rem;
+}
+
+.complete-btn {
+    background-color: rgb(68, 196, 68);
+}
+
+.complete-btn:hover {
+    cursor: pointer;
+    background-color: rgb(154, 252, 154);
+}
+
+.delete-btn {
+    background-color: rgb(201, 84, 84);
+}
+
+.delete-btn:hover {
+    cursor: pointer;
+    background-color: rgb(250, 129, 129);
 }
