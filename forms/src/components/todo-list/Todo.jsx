@@ -1,7 +1,7 @@
 import './Todo.css'
 import { useState } from 'react'
 
-export const Todo = ({ todo }) => {
+export const Todo = () => {
 
     const [todos, setTodos] = useState([
         {
@@ -22,13 +22,15 @@ export const Todo = ({ todo }) => {
         }
     ])
 
-    if (todo) {
-        todos.push({
-            text: todo,
-            isCompleted: false,
-            index: todos.length,
-        })
-    }
+    const [newTodo, setNewTodo] = useState('')
+
+    // if (todo) {
+    //     todos.push({
+    //         text: todo,
+    //         isCompleted: false,
+    //         index: todos.length,
+    //     })
+    // }
 
     function handleDelete(index) {
         const newTodos = [...todos]
@@ -42,23 +44,46 @@ export const Todo = ({ todo }) => {
         setTodos(newTodos)
     }
 
+    function handleSubmit(e) {
+
+        e.preventDefault()
+        
+        todos.push({
+            text: newTodo,
+            isCompleted: false,
+            index: todos.length,
+        })
+
+        const newTodos = [...todos];
+        setTodos(newTodos);
+        setNewTodo('')
+    }
+
     return (
-        <ul className='todo-wrapper'>
+        <>
+            <ul className='todo-wrapper'>
 
-            {todos.map((todo) => (
-                <div key={todo.index} className='todo-item-wrapper'>
-                    <li style={{textDecoration: todo.isCompleted ? 'line-through' : ''}} className='todo-item' key={todo.index}>{todo.text}</li>
+                {todos.map((todo) => (
+                    <div key={todo.index} className='todo-item-wrapper'>
+                        <li style={{ textDecoration: todo.isCompleted ? 'line-through' : '' }} className='todo-item' key={todo.index}>{todo.text}</li>
 
-                    <div className='buttons-wrapper'>
-                        <button onClick={() => {
-                            handleComplete(todo.index)
-                        }} className='complete-btn btn'>Complete</button>
-                        <button onClick={() => {
-                            handleDelete(todo.index)
-                        }} index={todo.index} className='delete-btn btn'>Delete</button>
+                        <div className='buttons-wrapper'>
+                            <button onClick={() => {
+                                handleComplete(todo.index)
+                            }} className='complete-btn btn'>Complete</button>
+                            <button onClick={() => {
+                                handleDelete(todo.index)
+                            }} index={todo.index} className='delete-btn btn'>Delete</button>
+                        </div>
                     </div>
-                </div>
-            ))}
-        </ul>
+                ))}
+            </ul>
+
+            <form className='todo-form' onSubmit={(e) => handleSubmit(e)}>
+                <label className='todo-label'>Add Todo</label>
+                <input className='todo-input' type="text" value={newTodo} onChange={(e) => { setNewTodo(e.target.value) }} />
+                <button className='add-todo-btn'>Add Todo</button>
+            </form>
+        </>
     )
 }

@@ -55,3 +55,21 @@
     cursor: pointer;
     background-color: rgb(250, 129, 129);
 }
+
+.todo-form {
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    margin: 0 auto;
+}
+
+.todo-label {
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+.todo-input {
+    padding: 0.2rem 0.5rem;
+    border-radius: .5rem;
+    border: none;
+}
