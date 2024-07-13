@@ -24,14 +24,6 @@ export const Todo = () => {
 
     const [newTodo, setNewTodo] = useState('')
 
-    // if (todo) {
-    //     todos.push({
-    //         text: todo,
-    //         isCompleted: false,
-    //         index: todos.length,
-    //     })
-    // }
-
     function handleDelete(index) {
         const newTodos = [...todos]
         newTodos.splice(index, 1)

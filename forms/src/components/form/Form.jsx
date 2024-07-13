@@ -21,17 +21,17 @@ const Form = () => {
         ))
     }
 
-    const [message, setMessage] = useState('');
-
     function submitHandler(e) {
         e.preventDefault();
-        
+
+        // This is test form that does nothing, just logs the user input
+
         if (!formValues.email || !formValues.message || !formValues.author) {
             return;
-        } 
-         
-        setMessage(formValues.message)
-        
+        }
+
+        console.log(formValues);
+
         setFormValues({
             email: '',
             message: '',
@@ -41,48 +41,49 @@ const Form = () => {
 
     return (
         <>
-        {/* <Todo 
-        todo={message} 
-        /> */}
-        <form className='practice-form' action="" onSubmit={submitHandler}>
-            <div className='input-wrapper'>
-                <label className='form-label' htmlFor="email">Email</label>
-                <input
-                    name='email'
-                    className='form-input'
-                    type="email"
-                    value={formValues.email}
-                    onChange={handleChange}
-                />
-            </div>
+            <form className='practice-form' action="" onSubmit={submitHandler}>
+                <div className='input-wrapper'>
+                    <label
+                        className='form-label'
+                        htmlFor="email">Email</label>
+                    <input
+                        name='email'
+                        className='form-input'
+                        type="email"
+                        value={formValues.email}
+                        onChange={handleChange}
+                    />
+                </div>
 
-            <div className='input-wrapper'>
-                <label className='form-label' htmlFor="email">Message</label>
-                <textarea
-                    className='form-input'
-                    name='message'
-                    value={formValues.message} 
-                    onChange={handleChange}>
-                </textarea>
-            </div>
+                <div className='input-wrapper'>
+                    <label
+                        className='form-label'
+                        htmlFor="email">Message</label>
+                    <textarea
+                        className='form-input'
+                        name='message'
+                        value={formValues.message}
+                        onChange={handleChange}>
+                    </textarea>
+                </div>
 
-            <div className='input-wrapper'>
-                <label className='form-label' htmlFor="author">Author</label>
-                <select 
-                    className='form-input'
-                    name="author"
-                    onChange={handleChange}
-                    value={formValues.author}
+                <div className='input-wrapper'>
+                    <label className='form-label' htmlFor="author">Author</label>
+                    <select
+                        className='form-input'
+                        name="author"
+                        onChange={handleChange}
+                        value={formValues.author}
                     >
-                    <option></option>
-                    <option>Me</option>
-                    <option>John Steinbeck</option>
-                </select>
-            </div>
-            
-            <input type="Submit" />
+                        <option></option>
+                        <option>Me</option>
+                        <option>John Steinbeck</option>
+                    </select>
+                </div>
 
-        </form>
+                <input type="Submit" />
+
+            </form>
         </>
     )
 }
