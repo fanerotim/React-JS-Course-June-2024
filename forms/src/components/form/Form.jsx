@@ -1,5 +1,5 @@
 import './Form.css'
-import { Todo } from '../components/todo-list/Todo';
+import { Todo } from '../todo-list/Todo';
 
 import { useState } from "react";
 
@@ -41,9 +41,9 @@ const Form = () => {
 
     return (
         <>
-        <Todo 
+        {/* <Todo 
         todo={message} 
-        />
+        /> */}
         <form className='practice-form' action="" onSubmit={submitHandler}>
             <div className='input-wrapper'>
                 <label className='form-label' htmlFor="email">Email</label>
