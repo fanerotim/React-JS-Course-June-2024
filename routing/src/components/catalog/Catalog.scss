@@ -1,0 +1,58 @@
+.catalog-wrapper {
+    padding: 3rem; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    width: 90%;
+    margin: 2rem auto;
+    border: 1px solid rgb(204, 195, 179);
+    border-radius: .5rem;
+}
+
+.catalog-heading {
+    font-size: 1.7rem;
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: 400;
+}
+
+.book-wrapper {
+    border-radius: .5rem;
+    background-color: rgb(245, 245, 245);
+    width: fit-content; 
+    max-width: 15rem; 
+    padding: .5rem;
+
+    height: 30rem;
+}
+
+.book-img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: .5rem;
+}
+
+.text-wrapper {
+    padding: .5rem 0;
+}
+
+.book-author, 
+.book-title {
+    color: rgb(31, 31, 31);
+    font-weight: 500;
+}
+
+.read-more-btn {
+    all: unset;
+    cursor: pointer;
+    margin-top: .5rem;
+    
+    &:hover {
+        color: rgb(85, 77, 77);
+        transition: .1s;
+    }
+}
