@@ -15,3 +15,22 @@
     color: rgb(129, 129, 129);
     font-weight: 400;
 }
+
+.nested-routing-nav {
+    display: flex;
+    margin: 2rem 0;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.nested-btn {
+    all: unset;
+    background-color: rgb(60, 60, 238);
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgb(66, 66, 158);
+    }
+}

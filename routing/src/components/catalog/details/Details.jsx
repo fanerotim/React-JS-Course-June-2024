@@ -4,7 +4,7 @@ import books from "../../db/db";
 
 const Details = () => {
     const { bookId } = useParams();
-
+    
     // this simulates API call
     const curBook = books.find(book => book.id == bookId)
 
