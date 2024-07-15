@@ -1,5 +1,6 @@
 import './Catalog.scss'
 import books from '../db/db';
+import { Link } from 'react-router-dom';
 
 const Catalog = () => {
 
@@ -17,7 +18,7 @@ const Catalog = () => {
                             <div className='text-wrapper'>
                                 <p className='book-author'>Author: {book.author}</p>
                                 <p className='book-title'>Book Title: {book.title}</p>
-                                <button className='read-more-btn'>Read more</button>
+                                <Link to={`/catalog/details/${book.id}`} className='read-more-btn'>Read more</Link>
                             </div>
                         </section>
                         )

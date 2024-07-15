@@ -2,6 +2,7 @@ import './App.css'
 import Home from './components/home/Home'
 import Catalog from './components/catalog/Catalog'
 import Navigation from './components/navigation/Navigation'
+import Details from './components/catalog/details/Details'
 import { Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/catalog' element={<Catalog />}></Route>
+        <Route path='/catalog/' element={<Catalog />}></Route>
+        <Route path='/catalog/details/:bookId' element={<Details/>}></Route>
       </Routes>
     </>
   )

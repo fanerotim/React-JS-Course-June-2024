@@ -1,0 +1,38 @@
+.details-wrapper {
+    width: 90%;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: rgb(236, 236, 236);
+    border-radius: .5rem;
+}
+
+.book-info {
+    text-align: center;
+    margin-bottom: 2.5rem; 
+
+    &__title {
+        font-size: 4rem;
+        color: rgb(37, 37, 37);
+    }
+
+    &__author {
+        color: rgb(68, 68, 68);
+        font-weight: 400;
+        font-size: 1.4rem;
+    }
+}
+
+.description,
+.about-author,
+.author-life {
+    font-weight: 200;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+
+    &__span {
+        font-size: 1.3rem;
+        font-weight: bold;
+        display: block;
+        margin-bottom: .5rem;
+    }
+}

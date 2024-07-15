@@ -1,21 +1,36 @@
 const books = [
     {
-        'imgUrl': 'https://cdn.penguin.co.uk/dam-assets/books/9781473590182/9781473590182-jacket-large.jpg',
-        'author': 'K. Kassabova',
-        'title': 'Exilir',
-        'id': 1
+        imgUrl: 'https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1663132485l/62039300.jpg',
+        author: 'K. Kassabova',
+        title: 'Exilir',
+        id: 1,
+        details: {
+            description: "In Elixir, in a wild river valley and amid the three mountains that define it, Kapka Kassabova seeks out the deep connection between people, plants, and place. The Mesta is one of the oldest rivers in Europe and the surrounding forests and mountains of the southern Balkans are an extraordinarily rich nexus for plant gatherers. Over several seasons, Kassabova spends time with the people of this magical region. She meets women and men who work in a long lineage of foragers, healers, and mystics. She learns about wild plants and the ancient practice of herbalism that makes use of them, and she experiences a symbiotic system where nature and culture have blended for thousands of years. Through her captivating encounters we come to feel the devastating weight of the ecological and cultural disinheritance that the people of this valley have suffered. And Kassabova reflects on what being disconnected from place can do to our souls and our bodies. Yet, in her search for elixir, she also finds reasons for hope. The people of the valley are keepers of a rare knowledge, not only of mountain plants and their properties, but also of how to transform collective suffering into healing.",
+            authorInfo: 'Kapka Kassabova (born in November 1973, in Bulgarian Капка Касабова) is a poet and writer of fiction and narrative non-fiction. She is a bilingual writer in English which is her main literary language and in Bulgarian which is her mother tongue. Her books are translated into twenty languages',
+            authorLife: 'Kapka Kassabova was born and grew up in a family of scientists in Sofia, Bulgaria.[1] She studied at the French College in Sofia. After leaving Bulgaria with her family in her late teens, she lived in New Zealand for twelve years where she studied French, Russian and English Literature and Creative Writing at the universities of Otago and Victoria, and published her first books of poetry and fiction. She moved to Scotland in 2005. After a number of years in Edinburgh, she settled in rural Inverness-shire.[2]'
+        }
     },
     {
-        'imgUrl': 'https://miro.medium.com/v2/resize:fit:1200/1*6QXManBm7wsBgDiagqPH8Q.png',
-        'author': 'G. Orwell',
-        'title': '1984',
-        'id': 2
+        imgUrl: 'https://book-website.com/wp-content/uploads/2023/10/nineteen-eighty-four-1984-george.jpg',
+        author: 'G. Orwell',
+        title: '1984',
+        id: 2,
+        details: {
+            description: "Nineteen Eighty-Four is a dystopian novel and cautionary tale by English writer George Orwell. It was published on 8 June 1949 by Secker & Warburg as Orwell's ninth and final book completed in his lifetime.",
+            authorInfo: 'Eric Arthur Blair (25 June 1903 – 21 January 1950) was a British novelist, poet, essayist, journalist, and critic who wrote under the pen name of George Orwell.[2] His work is characterised by lucid prose, social criticism, opposition to all totalitarianism (i.e. to both left-wing authoritarian communism and to right-wing fascism), and support of democratic socialism. Orwell produced literary criticism, poetry, fiction, and polemical journalism. He is known for the allegorical novella Animal Farm (1945) and the dystopian novel Nineteen Eighty-Four (1949). His non-fiction works, including The Road to Wigan Pier (1937), documenting his experience of working-class life in the industrial north of England, and Homage to Catalonia (1938), an account of his experiences soldiering for the Republican faction of the Spanish Civil War (1936–1939), are as critically respected as his essays on politics, literature, language and culture.',
+            authorLife: "Eric Arthur Blair was born on 25 June 1903 in Motihari, Bengal Presidency (now Bihar), British India, into what he described as a 'lower-upper-middle class' family.[8][9] His great-great-grandfather, Charles Blair, was a wealthy slaveowning country gentleman and absentee owner of two Jamaican plantations;[10] hailing from Dorset, he married Lady Mary Fane, daughter of the 8th Earl of Westmorland.[11] His grandfather, Thomas Richard Arthur Blair, was an Anglican clergyman. Orwell's father was Richard Walmesley Blair, who worked as a Sub-Deputy Opium Agent in the Opium Department of the Indian Civil Service, overseeing the production and storage of opium for sale to China.[12] His mother, Ida Mabel Blair (née Limouzin), grew up in Moulmein, Burma, where her French father was involved in speculative ventures.[11] Eric had two sisters: Marjorie, five years older; and Avril, five years younger. When Eric was one year old, his mother took him and Marjorie to England.[13][n 1] In 2014 restoration work began on Orwell's birthplace and ancestral house in Motihari."
+        }
     },
     {
-        'imgUrl': 'https://m.media-amazon.com/images/I/81bAXZAp-GL._AC_UF894,1000_QL80_.jpg',
-        'author': 'F. Dostoyevsky',
-        'title': 'Crime and Punishment',
-        'id': 3
+        imgUrl: 'https://m.media-amazon.com/images/I/81bAXZAp-GL._AC_UF894,1000_QL80_.jpg',
+        author: 'F. Dostoyevsky',
+        title: 'Crime and Punishment',
+        id: 3,
+        details: {
+            description: "Raskolnikov, a destitute and desperate former student, wanders through the slums of St Petersburg and commits a random murder without remorse or regret. He imagines himself to be a great man, a Napoleon: acting for a higher purpose beyond conventional moral law. But as he embarks on a dangerous game of cat and mouse with a suspicious police investigator, Raskolnikov is pursued by the growing voice of his conscience and finds the noose of his own guilt tightening around his neck. Only Sonya, a downtrodden sex worker, can offer the chance of redemption.",
+            authorInfo: "Fyodor Mikhailovich Dostoevsky was a Russian novelist, short story writer, essayist and journalist. Numerous literary critics regard him as one of the greatest novelists in all of world literature, as many of his works are considered highly influential masterpieces. Dostoevsky's literary works explore the human condition in the troubled political, social, and spiritual atmospheres of 19th-century Russia, and engage with a variety of philosophical and religious themes. His most acclaimed novels include Crime and Punishment (1866), The Idiot (1869), Demons (1872), and The Brothers Karamazov (1880). His 1864 novella Notes from Underground is considered to be one of the first works of existentialist literature.",
+            authorLife: "The major events of Dostoyevsky’s life—mock execution, imprisonment in Siberia, and epileptic seizures—were so well known that, even apart from his work, Dostoyevsky achieved great celebrity in his own time. Indeed, he frequently capitalized on his legend by drawing on the highly dramatic incidents of his life in creating his greatest characters. Even so, some events in his life have remained clouded in mystery, and careless speculations have unfortunately gained the status of fact. Unlike many other Russian writers of the first part of the 19th century, Dostoyevsky was not born into the landed gentry. He often stressed the difference between his own background and that of Leo Tolstoy or Ivan Turgenev and the effect of that difference on his work. First, Dostoyevsky was always in need of money and had to hurry his works into publication. Although he complained that writing against a deadline prevented him from achieving his full literary powers, it is equally possible that his frenzied style of composition lent his novels an energy that has remained part of their appeal. Second, Dostoyevsky often noted that, unlike writers from the nobility who described the family life of their own class, shaped by “beautiful forms” and stable traditions, he explored the lives of “accidental families” and of “the insulted and the humiliated.”",
+        }
     }
 ]
 
