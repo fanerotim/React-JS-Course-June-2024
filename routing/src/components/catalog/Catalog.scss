@@ -56,3 +56,19 @@
         transition: .1s;
     }
 }
+
+.add-btn {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    background-color: rgb(151, 255, 220);
+    font-weight: 500;
+    
+    &:hover {
+        background-color: rgb(190, 255, 233);
+    }
+}

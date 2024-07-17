@@ -16,6 +16,8 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home />}> 
+          {/* index specifies the default route - the one that will show on first render of component */}
+          <Route index element={<Authors/>}></Route>
           <Route path='authors' element={<Authors/>}></Route>
           <Route path='titles' element={<Titles/>}></Route>
         </Route>
