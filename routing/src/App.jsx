@@ -6,6 +6,7 @@ import Details from './components/catalog/details/Details'
 import Authors from './components/home/nested/Authors'
 import Titles from './components/home/nested/Titles'
 import { Routes, Route } from 'react-router-dom'
+import AddForm from './components/add-form/AddForm'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
         </Route>
         <Route path='/catalog/' element={<Catalog />}></Route>
         <Route path='/catalog/details/:bookId' element={<Details />}></Route>
+        <Route path='/catalog/add-new' element={<AddForm/>}></Route>
       </Routes>
       
     </>

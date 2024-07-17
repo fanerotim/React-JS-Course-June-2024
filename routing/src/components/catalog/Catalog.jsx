@@ -7,7 +7,7 @@ const Catalog = () => {
     return (
         <>
             <h1 className='catalog-heading'>Go through our list of classic book titles</h1>
-            <button class='add-btn'>Add Book</button>
+            <Link to='/catalog/add-new' className='add-btn'>Add Book</Link>
 
             <section className="catalog-wrapper">
 
