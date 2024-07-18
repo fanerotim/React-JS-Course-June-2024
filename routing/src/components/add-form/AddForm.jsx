@@ -3,7 +3,7 @@ import { useState } from "react";
 import books from '../db/db';
 import { useNavigate } from 'react-router-dom';
 
-const AddForm = ({data}) => {
+const AddForm = ({data, showForm}) => {
     const navigate = useNavigate();
     
     const [formValues, setFormValues] = useState({
@@ -41,6 +41,10 @@ const AddForm = ({data}) => {
         navigate('/catalog')
     }
 
+    function handleCancel() {
+        showForm();
+    }
+
     return (
         <div className='form-wrapper'>
             <form {...data ? {style : {zIndex: 200}} : ''} className='add-form' onSubmit={(e) => handleSubmit(e)}>
@@ -49,7 +53,7 @@ const AddForm = ({data}) => {
                 <label>Author</label>
                 <input className='add-form__input' name='author' type="text" value={formValues.author} onChange={(e) => handleChange(e)} />
                 <label>Image Url</label>
-                <input className='add-form__input' name='imgUrl' value={formValues.imgUrl} onChange={(e) => { handleChange(e) }} />
+                <input className='add-form__input' name='imgUrl' value={formValues.imgUrl} onChange={(e) =>  handleChange(e) } />
                 <label>Book description</label>
                 <textarea className='add-form__textArea' name="description" value={formValues.description} onChange={(e) => handleChange(e)}>Book Description</textarea>
                 <label>Author Info</label>
@@ -59,7 +63,7 @@ const AddForm = ({data}) => {
 
                 <div className='buttons-container'>
                     <button className='btn'>Submit</button>
-                    <button className='btn'>Cancel</button>
+                    <button onClick={handleCancel} className='btn'>Cancel</button>
                 </div>
             </form>
         </div>

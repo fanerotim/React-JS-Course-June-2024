@@ -20,7 +20,7 @@ const Catalog = () => {
             {/* <Link to='/catalog/add-new' className='add-btn'>Add Book</Link> */}
 
             <button onClick={showForm} className='add-btn'>Add Book</button>
-            {show ? <AddForm data={true}/> : ''}
+            {show ? <AddForm data={true} showForm={showForm}/> : ''}
 
             <section className="catalog-wrapper">
 
