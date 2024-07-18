@@ -3,9 +3,9 @@ import { useState } from "react";
 import books from '../db/db';
 import { useNavigate } from 'react-router-dom';
 
-const AddForm = () => {
+const AddForm = ({data}) => {
     const navigate = useNavigate();
-
+    
     const [formValues, setFormValues] = useState({
         title: '',
         author: '',
@@ -42,25 +42,27 @@ const AddForm = () => {
     }
 
     return (
-        <form className='add-form' onSubmit={(e) => handleSubmit(e)}>
-            <label>Title</label>
-            <input name='title' type="text" value={formValues.title} onChange={(e) => handleChange(e)} />
-            <label>Author</label>
-            <input name='author' type="text" value={formValues.author} onChange={(e) => handleChange(e)} />
-            <label>Image Url</label>
-            <input name='imgUrl' value={formValues.imgUrl} onChange={(e) => { handleChange(e) }} />
-            <label>Book description</label>
-            <textarea name="description" value={formValues.description} onChange={(e) => handleChange(e)}>Book Description</textarea>
-            <label>Author Info</label>
-            <textarea name="authorInfo" id="" value={formValues.authorInfo} onChange={(e) => handleChange(e)}>Author Info</textarea>
-            <label>Author Life</label>
-            <textarea name="authorLife" id="" value={formValues.authorLife} onChange={(e) => handleChange(e)}>Author life</textarea>
+        <div className='form-wrapper'>
+            <form {...data ? {style : {zIndex: 200}} : ''} className='add-form' onSubmit={(e) => handleSubmit(e)}>
+                <label>Title</label>
+                <input className='add-form__input' name='title' type="text" value={formValues.title} onChange={(e) => handleChange(e)} />
+                <label>Author</label>
+                <input className='add-form__input' name='author' type="text" value={formValues.author} onChange={(e) => handleChange(e)} />
+                <label>Image Url</label>
+                <input className='add-form__input' name='imgUrl' value={formValues.imgUrl} onChange={(e) => { handleChange(e) }} />
+                <label>Book description</label>
+                <textarea className='add-form__textArea' name="description" value={formValues.description} onChange={(e) => handleChange(e)}>Book Description</textarea>
+                <label>Author Info</label>
+                <textarea className='add-form__textArea' name="authorInfo" id="" value={formValues.authorInfo} onChange={(e) => handleChange(e)}>Author Info</textarea>
+                <label>Author Life</label>
+                <textarea className='add-form__textArea' name="authorLife" id="" value={formValues.authorLife} onChange={(e) => handleChange(e)}>Author life</textarea>
 
-            <div className='buttons-container'>
-                <button className='btn'>Submit</button>
-                <button className='btn'>Cancel</button>
-            </div>
-        </form>
+                <div className='buttons-container'>
+                    <button className='btn'>Submit</button>
+                    <button className='btn'>Cancel</button>
+                </div>
+            </form>
+        </div>
     )
 }
 
