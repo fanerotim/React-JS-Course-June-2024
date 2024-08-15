@@ -13,7 +13,12 @@ const ReducerPlayground = () => {
                 <button className='btn' onClick={() => {dispatch({type: COMMANDS.INCREMENT_AGE})}}>+</button>
                 <button className='btn' onClick={() => {dispatch({type: COMMANDS.DECREMENT_AGE})}}>-</button>
             </div>
-            <p>Hello Pesho, your age is {state.age}</p>
+            <p>Hello! My name is: {state.name}, and I am {state.age} years old.</p>
+
+            <input 
+            type="text" 
+            value={state.name}
+            onChange={(e) => dispatch({type: COMMANDS.CHANGE_NAME, payload: e.target.value})}/>
         </div>
     )
 }
